@@ -3,10 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CHOLICINE</title>
+    <link rel="icon" type="image/x-icon" href="images/iconweb.png">
+    <!-- gg font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- css -->
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" 
+        integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
 </head>
 <body>
-    Do an thuc hanh nhap mon web cuoi ky !!!!!!
+    <div class="container">
+    <header>
+    <div class="header">
+        <div id="logo">
+            <a href="#top"><img src="images/logo.png" alt="logo"></a>
+        </div>
+        <div class="menu_header">
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#phim">Phim</a></li>
+            <li><a href="#">Lịch chiếu</a></li>
+            <li><a href="#uudai">Ưu đãi</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">Lab TH</a></li>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Tìm kiếm ...">
+            <button type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    </header>
+
+    <div class="banner" id="home">
+        <div class="fade-banner">
+            <img src="images/banner1.jpg" class="active" alt="Hình ảnh 1">
+            <img src="images/banner2.jpg" alt="Hình ảnh 2">
+            <img src="images/banner3.jpg" alt="Hình ảnh 3">
+          </div>
+    </div>
+   
+    <main>
+        <div class="menu_phim" id="phim">
+            <ul>
+                <li><b>Phim</b></li>
+                <li><a href="">Đang chiếu</a></li>
+                <li><a href="">Sắp chiếu</a></li>
+            </ul>
+        </div>
+        
+        <div class="poster-row">
+            <div class="poster-container">
+                <img src="images/dia-dao.jpg" alt="Poster Phim" class="poster"/>
+                <div class="overlay">
+                    <a href="#" class="button">Đặt vé</a>
+                    <a href="diadao.html" target ="_self" class="button">Chi tiết</a>
+                </div>
+            </div>
+            <div class="poster-container">
+                <img src="images/thunderbolts.jpg" alt="Poster Phim" class="poster"/>
+                <div class="overlay">
+                    <button class="button">Đặt vé</button>
+                    <button class="button">Chi tiết</button>
+                </div>
+            </div>
+            <div class="poster-container">
+                <img src="images/lm8.jpg" alt="Poster Phim" class="poster"/>
+                <div class="overlay">
+                    <button class="button">Đặt vé</button>
+                    <button class="button">Chi tiết</button>
+                </div>
+            </div>
+            <div class="poster-container">
+                <img src="images/tham-tu-kien.jpg" alt="Poster Phim" class="poster"/>
+                <div class="overlay">
+                    <button class="button">Đặt vé</button>
+                    <button class="button">Chi tiết</button>
+                </div>
+            </div>
+        </div>
+        <table class="ten-phim">
+            <td>Địa đạo: Mặt trời trong bóng tối</td>
+            <td>Thunderbolts: Biệt đội sấm sét</td>
+            <td>Lật mặt 8: Vòng tay nắng</td>
+            <td>Thám tử Kiên: Kỳ án không đầu</td>
+        </table>
+        <br>
+        <div class="poster-row">
+            <div class="poster-container">
+                <img src="images/woolina.jpg" alt="Poster Phim" class="poster"/>
+                <div class="overlay">
+                    <button class="button">Đặt vé</button>
+                    <button class="button">Chi tiết</button>
+                </div>
+            </div>
+            <div class="poster-container">
+                <img src="images/shin.jpg" alt="Poster Phim" class="poster"/>
+                <div class="overlay">
+                    <button class="button">Đặt vé</button>
+                    <button class="button">Chi tiết</button>
+                </div>
+            </div>
+            <div class="poster-container">
+                <img src="images/mat-danh-ke-toan-2.jpg" alt="Poster Phim" class="poster"/>
+                <div class="overlay">
+                    <button class="button">Đặt vé</button>
+                    <button class="button">Chi tiết</button>
+                </div>
+            </div>
+            <div class="poster-container">
+                <img src="" alt="" class="poster"/>
+                <!-- <div class="overlay">
+                    <button class="button">Đặt vé</button>
+                    <button class="button">Chi tiết</button>
+                </div> -->
+            </div>
+        </div>
+        <table class="ten-phim">
+            <td>Woolina And The No Birds</td>
+            <td>Shin cậu bé bút chì</td>
+            <td>Mật danh: Kế toán 2</td>
+            <td> </td>
+        </table>
+        <br>
+
+        <div class="goc-uudai" id="uudai">
+            <div class="uudai"><b>Ưu đãi</b></div>
+            <img src="images/uudai2.png" alt="">
+            <img src="images/uudai5.jpg" alt="">
+            <img src="images/uudai1.jpg" alt="">
+        </div>
+
+      
+    </main> 
+
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Về CHOLICINE</h4>
+            <p>Trang web đặt vé xem phim trực tuyến với trải nghiệm <br> thân thiện và nhanh chóng.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Liên hệ</h4>
+            <p>Địa chỉ: 180 Cao Lỗ, phường 4, quận 8, Tp.HCM</p>
+            <p>Email: support@cholicine.vn</p>
+            <p>Hotline: 1900 123 456</p>
+          </div>
+          <div class="footer-section">
+            <h4>Theo dõi chúng tôi</h4>
+            <p>Facebook | Instagram | YouTube</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 CHOLICINE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    </div>  
+    <button id="backToTop" title="Lên đầu trang">↑</button>
+    <script src="js/main.js"></script>
 </body>
 </html>
