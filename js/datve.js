@@ -8,13 +8,11 @@ const showtimeData = {
     "p07": ["10:30", "11:00", "14:30", "18:00"],
     "p08": ["11:30", "11:00", "14:30", "18:00"]
 };
-
 const movieSelect = document.getElementById("movie");
 const showtimeSelect = document.getElementById("showtime");
 const bookingForm = document.getElementById("booking-form");
 const downloadBtn = document.getElementById("download-btn");
 const invoice = document.getElementById("invoice");
-
 function updateShowtimes() {
     const selectedMovie = movieSelect.value; // Lấy phim được chọn
     const times = showtimeData[selectedMovie] || []; // Lấy suất chiếu từ dữ liệu
@@ -38,13 +36,10 @@ function updateShowtimes() {
         showtimeSelect.appendChild(noOption);
     }
 }
-
 // Cập nhật suất chiếu khi thay đổi phim
 movieSelect.addEventListener("change", updateShowtimes);
-
 // Cập nhật suất chiếu khi trang tải xong
 document.addEventListener("DOMContentLoaded", updateShowtimes);
-
 bookingForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
