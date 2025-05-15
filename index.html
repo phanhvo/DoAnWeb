@@ -24,10 +24,10 @@
         <div class="menu_header">
             <li><a href="#home">Trang chủ</a></li>
             <li><a href="#phim">Phim</a></li>
-            <li><a href="#">Lịch chiếu</a></li>
+            <li><a href="datve.html">Đặt vé</a></li>
             <li><a href="#uudai">Ưu đãi</a></li>
-            <li><a href="#">Liên hệ</a></li>
-            <li><a href="#">Lab TH</a></li>
+            <li><a href="lienhe.html">Liên hệ</a></li>
+            <li><a href="LabThucHanh.html">Lab TH</a></li>
         </div>
         <div class="search">
             <input type="text" placeholder="Tìm kiếm ...">
@@ -50,122 +50,121 @@
         <div class="menu_phim" id="phim">
             <ul>
                 <li><b>Phim</b></li>
-                <li><a href="">Đang chiếu</a></li>
-                <li><a href="">Sắp chiếu</a></li>
+                <li><a href="#" id="menu-dang">Đang chiếu</a></li>
+                <li><a href="#" id="menu-sap">Sắp chiếu</a></li>
             </ul>
         </div>
         
-        <table class="poster-table">
-            <tr>
-                <td class="poster-cell">
+        <!-- <div id="poster-table-container"></div> -->
+        <section>
+                <div class="poster-cell">
                     <div class="poster-container">
                         <img src="images/dia-dao.jpg" alt="Poster Phim" class="poster" />
                         <div class="overlay">
-                            <a href="#" class="button">Đặt vé</a>
-                            <a href="diadao.html" class="button">Chi tiết</a>
+                            <!-- <a href="datve.html?id=p01" class="button">Đặt vé</a> -->
+                            <a href="detail.html?id=p01" class="button chi-tiet" data-id="p01">Chi tiết</a>
                         </div>
                     </div>
                     <div class="film-title">Địa đạo: Mặt trời trong bóng tối</div>
-                </td>
-                <td class="poster-cell">
+                </div>
+
+                <div class="poster-cell">
                     <div class="poster-container">
                         <img src="images/thunderbolts.jpg" alt="Poster Phim" class="poster" />
                         <div class="overlay">
-                            <a href="#" class="button">Đặt vé</a>
-                            <a href="#" class="button">Chi tiết</a>
+                            <!-- <a href="datve.html?id=p02" class="button">Đặt vé</a> -->
+                            <a href="detail.html?id=p02" class="button chi-tiet" data-id="p02">Chi tiết</a>
                         </div>
                     </div>
                     <div class="film-title">Thunderbolts: Biệt đội sấm sét</div>
-                </td>
-                <td class="poster-cell">
+                </div>
+
+                <div class="poster-cell">
                     <div class="poster-container">
                         <img src="images/lm8.jpg" alt="Poster Phim" class="poster" />
                         <div class="overlay">
-                            <a href="#" class="button">Đặt vé</a>
-                            <a href="#" class="button">Chi tiết</a>
+                            <!-- <a href="datve.html?id=p03" class="button">Đặt vé</a> -->
+                            <a href="detail.html?id=p03" class="button chi-tiet" data-id="p03">Chi tiết</a>
                         </div>
                     </div>
                     <div class="film-title">Lật mặt 8: Vòng tay nắng</div>
-                </td>
-                <td class="poster-cell">
+                </div>
+
+                <div class="poster-cell">
                     <div class="poster-container">
                         <img src="images/tham-tu-kien.jpg" alt="Poster Phim" class="poster" />
                         <div class="overlay">
-                            <a href="#" class="button">Đặt vé</a>
-                            <a href="#" class="button">Chi tiết</a>
+                            <!-- <a href="datve.html?id=p04" class="button">Đặt vé</a> -->
+                            <a href="detail.html?id=p04" class="button chi-tiet" data-id="p04">Chi tiết</a>
                         </div>
                     </div>
                     <div class="film-title">Thám tử Kiên: Kỳ án không đầu</div>
-                </td>
-            </tr>
-            <tr>
-                <td class="poster-cell">
+                </div>
+
+                <div class="poster-cell">
                     <div class="poster-container">
-                        <img src="images/woolina.jpg" alt="Poster Phim" class="poster" />
+                        <img src="images/holy-night.jpg" alt="Poster Phim" class="poster" />
                         <div class="overlay">
-                            <a href="#" class="button">Đặt vé</a>
-                            <a href="#" class="button">Chi tiết</a>
+                            <!-- <a href="datve.html?id=p05" class="button">Đặt vé</a> -->
+                            <a href="detail.html?id=p05" class="button chi-tiet" data-id="p05">Chi tiết</a>
                         </div>
                     </div>
-                    <div class="film-title">Woolina And The No Birds</div>
-                </td>
-                <td class="poster-cell">
+                    <div class="film-title">Holy Night: Hội săn quỷ</div>
+                </div>
+
+                <div class="poster-cell">
                     <div class="poster-container">
                         <img src="images/shin.jpg" alt="Poster Phim" class="poster" />
                         <div class="overlay">
-                            <a href="#" class="button">Đặt vé</a>
-                            <a href="#" class="button">Chi tiết</a>
+                            <!-- <a href="datve.html?id=p06" class="button">Đặt vé</a> -->
+                            <a href="detail.html?id=p06" class="button chi-tiet" data-id="p06">Chi tiết</a>
                         </div>
                     </div>
                     <div class="film-title">Shin cậu bé bút chì</div>
-                </td>
-                <td class="poster-cell">
+                </div>
+
+                <div class="poster-cell">
                     <div class="poster-container">
                         <img src="images/mat-danh-ke-toan-2.jpg" alt="Poster Phim" class="poster" />
                         <div class="overlay">
-                            <a href="#" class="button">Đặt vé</a>
-                            <a href="#" class="button">Chi tiết</a>
+                            <!-- <a href="datve.html?id=p07" class="button">Đặt vé</a> -->
+                            <a href="detail.html?id=p07" class="button chi-tiet" data-id="p07">Chi tiết</a>
                         </div>
                     </div>
                     <div class="film-title">Mật danh: Kế toán 2</div>
-                </td>
-                <td class="poster-cell">
+                </div>
+                
+                <div class="poster-cell">
                     <div class="poster-container">
-                        <img src="images/placeholder.jpg" alt="Poster Phim" class="poster" />
+                        <img src="images/quai-thu.jpg" alt="Poster Phim" class="poster" />
                         <div class="overlay">
-                            <a href="#" class="button">Đặt vé</a>
-                            <a href="#" class="button">Chi tiết</a>
+                            <a href="detail.html?id=p08" class="button chi-tiet" data-id="p08">Chi tiết</a>
                         </div>
                     </div>
-                    <div class="film-title">[Đang cập nhật]</div>
-                </td>
-            </tr>
-        </table>
-
+                    <div class="film-title">Quái thú đại náo sở thú</div>
+                </div>
+        </section>
+       
         <div class="goc-uudai" id="uudai">
-            <div class="uudai"><b>Ưu đãi</b></div>
+            <div class="uudaii"><b>Ưu đãi</b></div>
             <img src="images/uudai2.png" alt="">
             <img src="images/uudai5.jpg" alt="">
             <img src="images/uudai1.jpg" alt="">
         </div>
 
+      
     </main> 
+    <br>
 
     <footer class="footer">
         <div class="footer-content">
           <div class="footer-section">
-            <h4>Về CHOLICINE</h4>
-            <p>Trang web đặt vé xem phim trực tuyến với trải nghiệm <br> thân thiện và nhanh chóng.</p>
+            <p>Võ Phương Anh</p>
+            <p>D22_TH02</p>
           </div>
           <div class="footer-section">
-            <h4>Liên hệ</h4>
-            <p>Địa chỉ: 180 Cao Lỗ, phường 4, quận 8, Tp.HCM</p>
-            <p>Email: support@cholicine.vn</p>
-            <p>Hotline: 1900 123 456</p>
-          </div>
-          <div class="footer-section">
-            <h4>Theo dõi chúng tôi</h4>
-            <p>Facebook | Instagram | YouTube</p>
+            <p>DH52200344</p>
+            <p>Nhóm 05 Thứ 2 Ca 2</p>
           </div>
         </div>
         <div class="footer-bottom">
@@ -174,7 +173,9 @@
     </footer>
 
     </div>  
-    <button id="backToTop" title="Lên đầu trang">↑</button>
+
+    <button onclick="cuonLenDauTrang()" id="btnTop">⬆</button>
+
     <script src="js/main.js"></script>
 </body>
 </html>

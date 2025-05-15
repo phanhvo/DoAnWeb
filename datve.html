@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang đặt vé</title>
+    <link rel="icon" type="image/x-icon" href="images/iconweb.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" 
+        integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="style/datve.css">
+</head>
+<body>
+  <div class="=container">
+    <header>
+    <div class="header">
+        <div id="logo">
+            <a href="#top"><img src="images/logo.png" alt="logo"></a>
+        </div>
+        <div class="menu_header">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="index.html">Phim</a></li>
+            <li><a href="datve.html">Đặt vé</a></li>
+            <li><a href="index.html">Ưu đãi</a></li>
+            <li><a href="lienhe.html">Liên hệ</a></li>
+            <li><a href="LabThucHanh.html">Lab TH</a></li>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Tìm kiếm ...">
+            <button type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    </header>
+
+    <div class="datve-container">
+      <h2>ĐẶT VÉ XEM PHIM</h2>
+      <form id="booking-form">
+        <label for="cinema">Chọn rạp:</label>
+        <select id="cinema">
+          <option>Cholicine Kinh Dương Vương</option>
+          <option>Cholicine Hai Bà Trưng</option>
+          <option>Cholicine Quận 8</option>
+          <option>Cholicine Quận 10</option>
+          <option>Cholicine Lý Thường Kiệt</option>
+        </select>
+
+        <label for="movie">Chọn phim:</label>
+        <select id="movie">
+          <option value="p01">Địa đạo: Mặt trời trong bóng tối</option>
+          <option value="p02">Thunderbolts: Biệt đội sấm sét</option>
+          <option value="p03">Lật mặt 8: Vòng tay nắng</option>
+          <option value="p04">Thám tử Kiên: Kỳ án không đầu</option>
+          <option value="p05">Holy Night: Hội săn quỷ</option>
+          <option value="p06">Shin cậu bé bút chì</option>
+          <option value="p07">Mật danh: Kế toán 2</option>
+          <option value="p08">Quái thú đại náo sở thú</option>
+        </select>
+
+        <label for="showtime">Suất chiếu:</label>
+        <select id="showtime">
+          <!-- JS sẽ cập nhật -->
+        </select>
+
+        <label for="quantity">Số lượng vé:</label>
+        <input type="number" id="quantity" min="1" max="10" value="1" />
+
+        <button type="submit" class="btn-datve">Đặt vé</button>
+      </form>
+
+      <div class="invoice" id="invoice" style="display: none;">
+        <h3>HÓA ĐƠN</h3>
+        <p><strong>Rạp:</strong> <span id="inv-cinema"></span></p>
+        <p><strong>Phim:</strong> <span id="inv-movie"></span></p>
+        <p><strong>Suất chiếu:</strong> <span id="inv-showtime"></span></p>
+        <p><strong>Số lượng vé:</strong> <span id="inv-quantity"></span></p>
+        <p><strong>Giá vé:</strong> <span id="inv-total"></span> VNĐ</p>
+        <button id="download-btn">Tải ảnh hóa đơn</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <p>Võ Phương Anh</p>
+            <p>D22_TH02</p>
+          </div>
+          <div class="footer-section">
+            <p>DH52200344</p>
+            <p>Nhóm 05 Thứ 2 Ca 2</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 CHOLICINE. All rights reserved.</p>
+        </div>
+    </footer>
+  </div>
+    <script src="js/datve.js"></script>
+</body>
+</html>

@@ -1,34 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi tiết Phim</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết phim</title>
+  <link rel="icon" type="image/x-icon" href="images/iconweb.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" 
+        integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="style/detail.css">
 </head>
 <body>
-    <div class="film-detail">
-        <img src="images/dia-dao.jpg" alt="Poster Địa đạo" class="movie-poster">
-        <div class="film-content">
-            <h1>Địa đạo: Mặt trời trong bóng tối</h1>
-            <p><strong>Ngày khởi chiếu:</strong> 2.4.2025</p>
-            <p><strong>Thể loại:</strong> Hành động, Lịch sử, Chiến tranh</p>
-            <p><strong>Đạo diễn:</strong> Bùi Thạc Chuyên</p>
-            <p><strong>Diễn viên:</strong> Thái Hòa, Hồ Thu Anh, Quang Tuấn, NSUT Cao Minh, ...</p>
-            <p><strong>Nội dung:</strong> Địa Đạo: Mặt Trời Trong Bóng Tối là dự án điện ảnh kỷ niệm 50 năm hòa bình thống nhất đất nước, dự kiến khởi chiếu 30.04.2025. 
-                Phim do đạo diễn Bùi Thạc Chuyên cầm trịch, với sự tham gia của dàn diễn viên thực lực – Thái Hòa, Quang Tuấn và diễn viên trẻ Hồ Thu Anh. Vào năm 1967, 
-                chiến tranh Việt Nam ngày càng khốc liệt. Đội du kích 21 người do BẢY THEO chỉ huy tại căn cứ Bình An Đông trở thành mục tiêu mà quân đội Mỹ TÌM VÀ DIỆT 
-                số 1 khi nhận nhiệm vụ bằng mọi giá phải bảo vệ một nhóm thông tin tình báo chiến lược mới đến ẩn náu tại căn cứ. Các cuộc liên lạc vô tuyến điện từ 
-                với nhóm tình báo bị quân đội Mỹ phát hiện và định vị, lấy đi lợi thế duy nhất của đội du kích là sự vô hình trong hệ thống địa đạo rộng khắp, phức tạp 
-                và bí ẩn. Bộ phim là những câu chuyện đan xen giữa tình đồng đội, tình yêu và khát khao sống ở những người lính. Trên hết, vẫn là nghĩa vụ và sự hi sinh 
-                vì Tổ Quốc. Đạo diễn Bùi Thạc Chuyên nung nấu 10 năm trời để chuẩn bị cho phim điện ảnh Địa Đạo, đem câu chuyện huyền thoại về nhân dân miền Nam tài trí 
-                thông minh và tinh thần yêu nước ngoan cường ngày ấy lên màn ảnh rộng. Lịch sử đã chứng minh, dẫu cho trên đầu là bom rơi đạn nổ, dưới hầm là không khí 
-                đặc quánh đến hít thở cũng khó khăn, chỉ cần trong tim mỗi người chiến sĩ luôn hướng đến ánh sáng tự do của một dân tộc tự do trong tương lai, họ sẽ 
-                kiên trì đứng vững mà chiến đấu. Như có mặt trời trong bóng tối luôn soi sáng dẫn đường. </p>
-            <button class="button">Đặt vé ngay</button>
-            <a href="index.html" class="button">Quay lại trang chủ</a>
+    <header>
+    <div class="header">
+        <div id="logo">
+            <a href="#top"><img src="images/logo.png" alt="logo"></a>
+        </div>
+        <div class="menu_header">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="index.html">Phim</a></li>
+            <li><a href="datve.html">Đặt vé</a></li>
+            <li><a href="index.html">Ưu đãi</a></li>
+            <li><a href="lienhe.html">Liên hệ</a></li>
+            <li><a href="LabThucHanh.html">Lab TH</a></li>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Tìm kiếm ...">
+            <button type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
         </div>
     </div>
-    <script type="module" src="js/datafilm.js"></script>
-    <script type="module" src="js/script.js"></script>
+    </header>
+
+    <div id="phim-container">
+        <h1 id="ten-phim"></h1>
+        <img id="anh-phim" src="" alt="Poster phim" style="max-width: 300px;">
+        <p><strong>Thể loại:</strong> <span id="theloai"></span></p>
+        <p><strong>Thời lượng:</strong> <span id="thoiluong"></span></p>
+        <p><strong>Đạo diễn:</strong> <span id="daodien"></span></p>
+        <p><strong>Diễn viên:</strong> <span id="dienvien"></span></p>
+        <p><strong>Mô tả:</strong> <span id="mota"></span></p>
+        <button onclick="quayLai()">← Quay lại</button>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <p>Võ Phương Anh</p>
+            <p>D22_TH02</p>
+          </div>
+          <div class="footer-section">
+            <p>DH52200344</p>
+            <p>Nhóm 05 Thứ 2 Ca 2</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 CHOLICINE. All rights reserved.</p>
+        </div>
+    </footer>
+
+  <script src="js/datafilm.js"></script>
+  <script src="js/detail.js"></script>
 </body>
 </html>

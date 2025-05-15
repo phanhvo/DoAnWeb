@@ -25,83 +25,118 @@ function nextImage() {
         
 setInterval(nextImage, 3000); // Chuyển đổi ảnh sau mỗi 3 giây
 
- // Dữ liệu chi tiết phim
- const movieDetails = {
-    "Địa đạo: Mặt trời trong bóng tối": {
-      title: "Địa đạo: Mặt trời trong bóng tối",
-      description: "Thể loại: Lịch sử, Hành động\nThời lượng: 125 phút\nKhởi chiếu: 30.04.2024"
-    },
-    "Biệt đội sấm sét": {
-      title: "Thunderbolts: Biệt đội sấm sét",
-      description: "Thể loại: Hành động, Giả tưởng, Phiêu lưu\nThời lượng: 126 phút\nKhởi chiếu: 30.04.2025"
-    },
-    "Lật mặt 8: Vòng tay nắng": {
-      title: "Lật mặt 8: Vòng tay nắng",
-      description: "Thể loại: Tâm lý, Tình cảm, Gia đình\nThời lượng: 135 phút\nKhởi chiếu: 27.04.2024"
-    },
-    "Những Gã Trai Hư: Chơi Hay Bị Xơi": {
-      title: "Những Gã Trai Hư: Chơi Hay Bị Xơi",
-      description: "Thể loại: Hành động, Hài hước\nThời lượng: 115 phút\nKhởi chiếu: 07/06/2024"
-    },
-    "Linh Hồn Vũ Nữ 2: Nghi Thức Hồi Sinh": {
-      title: "Linh Hồn Vũ Nữ 2: Nghi Thức Hồi Sinh",
-      description: "Thể loại: Kinh dị\nThời lượng: 122 phút\nKhởi chiếu: 07/06/2024"
-    },
-    "Móng Vuốt": {
-      title: "Móng Vuốt",
-      description: "Thể loại: Kinh dị\nThời lượng: Chưa công bố\nKhởi chiếu: 07/06/2024"
-    }
-  };
+// Hiển thị nút khi cuộn xuống 200px
+window.onscroll = function () {
+  const btn = document.getElementById("btnTop");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+// Khi click nút
+function cuonLenDauTrang() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
-  // Nút Chi tiết phim
-  const detailButtons = document.querySelectorAll(".btn-detail");
-  const popup = document.getElementById("popup-detail");
-  const popupTitle = document.getElementById("popup-title");
-  const popupDescription = document.getElementById("popup-description");
 
-  detailButtons.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      const movieTitle = this.closest(".movie-item").querySelector("h3").innerText;
-      const details = movieDetails[movieTitle];
+// //hien thi danh sach phim dang chieu / sap chieu
+// function hienDanhSachPhim(loai) {
+//   const danhSach = phimList[loai];
+//   const table = document.getElementById("poster-table");
+//   table.innerHTML = ""; // xóa nội dung cũ
 
-      if (details) {
-        popupTitle.innerText = details.title;
-        popupDescription.innerText = details.description;
-      } else {
-        popupTitle.innerText = "Không có thông tin chi tiết";
-        popupDescription.innerText = "Không có thông tin cho phim này.";
-      }
+//   for (let i = 0; i < danhSach.length; i += 4) {
+//     const row = document.createElement("tr");
+//     for (let j = i; j < i + 4 && j < danhSach.length; j++) {
+//       const phim = danhSach[j];
+//       const cell = document.createElement("td");
+//       cell.className = "poster-cell";
+//       const linkChiTiet = phim.id ? `detail.html?id=${phim.id}` : "#";
 
-      popup.style.display = "flex";
+//       cell.innerHTML = `
+//         <div class="poster-container">
+//           <img src="${phim.anh}" alt="Poster Phim" class="poster" />
+//           <div class="overlay">
+//               <a href="#" class="button">Đặt vé</a>
+//               <a href="${linkChiTiet}" class="button">Chi tiết</a>
+//           </div>
+//         </div>
+//         <div class="film-title">${phim.ten}</div>
+//       `;
+
+//       row.appendChild(cell);
+//     } 
+//     table.appendChild(row);
+//   }
+// }
+// document.addEventListener("DOMContentLoaded", () => {
+//   // Gán sự kiện click cho menu
+//   document.getElementById("menu-dang").addEventListener("click", (e) => {
+//     e.preventDefault();
+//     hienDanhSachPhim("dangchieu");
+//   });
+
+//   document.getElementById("menu-sap").addEventListener("click", (e) => {
+//     e.preventDefault();
+//     hienDanhSachPhim("sapchieu");
+//   });
+//   // Mặc định hiển thị phim đang chiếu
+//   hienDanhSachPhim("dangchieu");
+// });
+
+// //hien thi phim dang chieu / sap chieu
+// function createPosterHTML(film) {
+//     return `
+//         <td class="poster-cell">
+//             <div class="poster-container">
+//                 <img src="${film.image}" alt="${film.title}" class="poster" />
+//                 <div class="overlay">
+//                     <a href="#" class="button">Đặt vé</a>
+//                     <a href="detail.html?id=${film.id}" class="button">Chi tiết</a>
+//                 </div>
+//             </div>
+//             <div class="film-title">${film.title}</div>
+//         </td>
+//     `;
+// }
+
+// function renderFilms(films) {
+//     const rows = [];
+//     for (let i = 0; i < films.length; i += 4) {
+//         const row = films.slice(i, i + 4).map(createPosterHTML).join('');
+//         rows.push(`<tr>${row}</tr>`);
+//     }
+//     document.getElementById("poster-table-container").innerHTML = `
+//         <table class="poster-table">${rows.join('')}</table>
+//     `;
+// }
+
+// document.getElementById("menu-dang").addEventListener("click", (e) => {
+//     e.preventDefault();
+//     renderFilms(dangChieu);
+// });
+// document.getElementById("menu-sap").addEventListener("click", (e) => {
+//     e.preventDefault();
+//     renderFilms(sapChieu);
+// });
+// // Mặc định hiển thị phim đang chiếu
+// renderFilms(dangChieu);
+
+//khi bam quay lai trang chu thi tro ve ngay dung vi tri poster vua chon
+document.querySelectorAll('.chi-tiet').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = this.dataset.id;
+        sessionStorage.setItem('scrollPosition', window.scrollY); // lưu vị trí cuộn
+        window.location.href = `detail.html?id=${id}`;
     });
-  });
-
-  // Đóng popup khi bấm ra ngoài
-  popup.addEventListener("click", function (e) {
-    if (e.target === popup) {
-      popup.style.display = "none";
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollY = sessionStorage.getItem('scrollPosition');
+    if (scrollY !== null) {
+        window.scrollTo(0, parseInt(scrollY));
+        sessionStorage.removeItem('scrollPosition'); // Xoá để tránh scroll lại sau đó
     }
-  });
+});
 
-function showMovieDetailsPopup() {
-  document.getElementById("movieDetailsPopupOverlay").style.display = "flex";
-}
-
-function hideMovieDetailsPopup() {
-  document.getElementById("movieDetailsPopupOverlay").style.display = "none";
-}
-
-//nut backtotop
-const backToTopBtn = document.getElementById("backToTop");
-
-  window.addEventListener("scroll", () => {
-    if (document.documentElement.scrollTop > 200) {
-      backToTopBtn.style.display = "block";
-    } else {
-      backToTopBtn.style.display = "none";
-    }
-  });
-
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });

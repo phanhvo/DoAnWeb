@@ -1,0 +1,74 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base */
+body {
+    font-family: sans-serifs;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    line-height: 1;
+}
+
+/* Lab container */
+.lab {
+    background-color: #fff;
+    border-left: 5px solid rgb(81, 10, 10);
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Lab heading */
+.lab h1 {
+    font-size: 1.5rem;
+    color: rgb(81, 10, 10);
+    margin-bottom: 10px;
+}
+
+/* List & links */
+.lab li {
+    list-style: none;
+    margin: 6px 0;
+}
+
+.lab a {
+    text-decoration: none;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lab a:hover {
+    background-color: rgb(81, 10, 10);
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .lab {
+        padding: 12px 15px;
+    }
+
+    .lab h1 {
+        font-size: 1.2rem;
+    }
+
+    .lab a {
+        font-size: 0.95rem;
+        padding: 5px 10px;
+    }
+}
+
